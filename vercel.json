@@ -13,7 +13,7 @@
       {
         "src": "/(.*)",
         "dest": "vasanth_portfolio/wsgi.py"
-      }
+        }
     ]
   }
   
