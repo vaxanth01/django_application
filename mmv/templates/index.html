@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+  <!-- ======= Hero Section ======= -->
+  <section id="he" class="d-flex align-items-center">
+    <div class="container d-flex flex-column align-items-center text-muted move-up-1inch" data-aos="zoom-in" data-aos-delay="10">
+      <h1>Vasanthkumar</h1>
+      <h2 class="text-center">I'm a professional python fullstack developer</h2>
+      <a href="{% url 'about' %}" class="btn-about text-muted">About Me</a>
+    </div>
+  </section>
+  
+  <style>
+    .move-up-1inch {
+      margin-top: -3in;
+    }
+    
+    #he {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+  
+    #he::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: url("../static/assets/img/vasa.jpg") top center;
+      background-size: cover;
+      opacity: 0.6; /* Adjust the opacity value as needed */
+      z-index: 1;
+    }
+  
+    #he .container {
+      position: relative;
+      z-index: 2;
+    }
+  </style>
+    
+  {% endblock content %}
