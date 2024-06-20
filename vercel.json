@@ -5,8 +5,7 @@
       "src": "vasanth_portfolio/wsgi.py",
       "use": "@vercel/python",
       "config": {
-        "maxLambdaSize": "15mb",
-        "runtime": "python3.9"
+        "runtime": "python@3.11"
       }
     },
     {
@@ -26,5 +25,9 @@
       "src": "/(.*)",
       "dest": "vasanth_portfolio/wsgi.py"
     }
-  ]
+  ],
+  "env": {
+    "DJANGO_SETTINGS_MODULE": "your_project.settings",
+    "DATABASE_URL": "@mysql://root@localhost:3306/mmv"
+  }
 }

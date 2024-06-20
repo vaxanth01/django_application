@@ -62,18 +62,19 @@ WSGI_APPLICATION = 'vasanth_portfolio.wsgi.application'
 
 
 DATABASES = {
-	'default': {
-		'ENGINE': 'django.db.backends.mysql',
-		'NAME': 'mmv',
-		'USER': 'root',
-		'PASSWORD': '',
-		'HOST':'localhost',
-		'PORT':'3306',
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': os.getenv('DB_NAME', 'mmv'),
+        'USER': os.getenv('DB_USER', 'root'),
+        'PASSWORD': os.getenv('DB_PASSWORD', ''),
+        'HOST': os.getenv('DB_HOST', 'localhost'),
+        'PORT': os.getenv('DB_PORT', '3306'),
         'OPTIONS': {
             'sql_mode': 'STRICT_TRANS_TABLES',
         },
-	}
+    }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
