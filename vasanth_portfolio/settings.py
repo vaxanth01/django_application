@@ -113,8 +113,13 @@ USE_TZ = True
 # Assuming BASE_DIR is already defined in your settings
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+
+# Base directory
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Static files settings
 STATIC_URL = '/static/'
-STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 # Default primary key field type
