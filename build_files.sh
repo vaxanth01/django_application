@@ -1,3 +1,5 @@
-pip install -r requirements.txt
-python3.9 manage.py collectstatic
+#!/bin/bash
+pip3 install -r requirements.txt
+
+python3.11 manage.py collectstatic
 pip install django
