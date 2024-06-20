@@ -9,3 +9,6 @@ pip3 install -r requirements.txt
 
 # Collect static files
 python3 manage.py collectstatic --noinput
+
+
+chmod +x build_files.sh
