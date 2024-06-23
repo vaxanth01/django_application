@@ -63,13 +63,15 @@ WSGI_APPLICATION = 'vasanth_portfolio.wsgi.application'
 
 DATABASES = {
 	'default': {
-		'ENGINE': 'django.db.backends.postgresql',
-		'NAME': 'railway',
-		'USER': 'postgres',
-		'PASSWORD': 'sFBODOLWoZZFddpPyjSlmOEAojaJWDEI',
-		'HOST':'monorail.proxy.rlwy.net',
-		'PORT':'17761',
-       
+		'ENGINE': 'django.db.backends.mysql',
+		'NAME': 'ecommerce',
+		'USER': 'root',
+		'PASSWORD': '',
+		'HOST':'localhost',
+		'PORT':'3306',
+        'OPTIONS': {
+            'sql_mode': 'STRICT_TRANS_TABLES',
+        },
 	}
 }
 
